@@ -1,6 +1,6 @@
 
 describe('Bubble Sort', function(){
-  beforeAll(function(){
+  beforeEach(function(){
   	spyOn(window, "swap").and.callThrough();
   });
 

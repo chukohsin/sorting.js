@@ -4,17 +4,17 @@ function bubbleSort(arr){
   for(let i = 0; i < arr.length-1; i++){
     for(let k = 0; k < arr.length-1; k++ ){
       if(arr[k] > arr[k+1]) {
-        let temp = arr[k];
-        arr[k] = arr[k+1];
-        arr[k+1] = temp;
+        arr = swap(arr, k, k+1);
+        console.log(arr);
       }
     }
   }
   return arr;
 }
 
-function swap(arg1, arg2){
-  let temp = arg1;
-  arg1 = arg2;
-  arg2 = temp;
+function swap(arr, index1, index2){
+  let temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
+  return arr;
 }
